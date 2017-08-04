@@ -1,0 +1,245 @@
+body.chat-body {
+  background: url('/static/img/chat.jpg');
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.header img {
+  margin: 0 auto;
+}
+
+.chat {
+  min-height: calc(100vh - 150px - 100px);
+  background-color: transparent;
+  padding: 25px;
+  margin: 20px auto;
+  box-shadow: 0 3px transparent;
+}
+
+.conversations {
+  padding: 10px;
+  width: 100%;
+  height: calc(100vh - 150px - 100px - 120px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.conversations::-webkit-scrollbar {
+  width: 10px;
+}
+
+.conversations::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(0, 0, 0, .1);
+}
+
+.message {
+  clear: both;
+  max-width: 85%;
+  word-wrap: break-word;
+  z-index: -1;
+  padding: 15px;
+  margin: 5px 10px 0;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  line-height: 18px;
+  font-size: 15px;
+}
+
+.metadata {
+  display: inline-block;
+  float: right;
+  padding: 0 0 0 7px;
+  position: relative;
+  bottom: -4px;
+}
+
+.metadata .time {
+  color: rgba(0, 0, 0, .45);
+  font-size: 11px;
+  display: inline-block;
+}
+
+.message.received {
+  background: #fff;
+  color: #800300;
+  border-radius: 0px 20px 20px 0px;
+  float: left;
+}
+
+.message.received .metadata {
+  padding: 0 0 0 16px;
+}
+
+.message.sent {
+  background: #800300;
+  color: #fff;
+  border-radius: 20px 0px 0px 20px;
+  float: right;
+}
+
+.message.attachment {
+  float: left;
+}
+
+.message.attachment button {
+  margin-left:15px;
+}
+
+.compose {
+  margin-top: 20px;
+  height: 50px;
+  width: 100%;
+}
+
+.compose .inputChat {
+  background: transparent;
+  color: #fff;
+  height: 50px;
+  padding: 15px;
+  border: none;
+  float: left;
+  width: 90%;
+  border: 2px solid #fff;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  outline: none;
+}
+
+.compose .inputChat::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.compose .inputChat:-moz-placeholder {
+  color: #ffffff;
+}
+
+.compose .inputChat:focus::-webkit-input-placeholder { color:transparent; }
+.compose .inputChat:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+.compose .inputChat:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+.compose .inputChat:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+.compose .send {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  margin: 5px 0px;
+  padding: 0;
+  position: relative;
+  outline: none;
+  float: right;
+  width: 10%;
+}
+
+.compose .send .circle {
+  background: transparent;
+  border-radius: 50%;
+  color: #fff;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compose .send .circle span {
+  font-size: 24px;
+}
+
+.btn-attachment {
+  max-height: 30px;
+}
+
+.btn-chat {
+  background: none;
+  padding: 12px 22px;
+  margin: 20px 0 20px 0;
+}
+
+.btn-chat {
+  border: none;
+  color: #800300;
+  margin: auto 5px;
+  background-color: #fff;
+}
+
+.btn-chat:hover, .btn-chat:focus, .btn-chat:active {
+  color: #ffffff;
+  border: none;
+  background-color: #800300;
+}
+
+
+/* Extra small devices (767px and down) */
+@media (max-width: 767px) {
+  .header img {
+    margin: 0 auto;
+    height: 70px;
+    width: 70px;
+  }
+  .row.vertical-align {
+    display: block; /* Turn off the flexible box layout */
+  }
+  .chat {
+    min-height: calc(100vh - 150px - 40px);
+    background-color: transparent;
+    padding: 10px;
+    margin: 10px auto;
+    box-shadow: 0 3px transparent;
+  }
+  .conversations {
+    padding: 7px;
+    width: 100%;
+    height: calc(100vh - 150px - 20px - 120px);
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  .message {
+    clear: both;
+    max-width: 85%;
+    word-wrap: break-word;
+    z-index: -1;
+    padding: 7px;
+    margin: 2px 5px 0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 18px;
+    font-size: 15px;
+  }
+  .message.attachment button {
+    margin-left: 5px;
+  }
+  .compose .send .circle {
+    background: #800300;
+    border-radius: 50%;
+    color: #fff;
+    position: relative;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .compose .send .circle span {
+    font-size: 16px;
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .row.vertical-align {
+    display: flex;
+    align-items: center;
+  }
+}

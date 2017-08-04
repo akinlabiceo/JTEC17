@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<body class="chat-body">
+  <div class="container">
+    <a href="{{ url_for('index')}}" class="header">
+      <img class="img-responsive" src="{{ url_for('static',filename='img/Logo.png') }}" alt="Brand" width="152" height="118">
+    </a>
+    <hr>
+    <div class="chat">
+      <div class="conversations" id="conversations">
+
+      </div>
+
+      <div class="compose">
+
+        <div class="row">
+          <div class="col-md-10 col-sm-10 col-xs-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 text-center">
+            <input type="text" class="inputChat" id="inputChat" name="inputChat" placeholder="How can I help you?" required>
+            <button class="send" id="send">
+              <div class="circle">
+                <span class="glyphicon glyphicon-send"></span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</body>
+{% endblock %}
